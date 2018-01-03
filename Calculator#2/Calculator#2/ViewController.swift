@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var urerIsIntheMiddleofTyping = false //定义一个布尔值
     
     @IBAction func touchDight(_ sender: UIButton) {
-        var digit = sender.currentTitle! //接收按钮的数字
+        let digit = sender.currentTitle! //接收按钮的数字
         if urerIsIntheMiddleofTyping {
             let textCurrentlyInDisplay = display.text! //把内容显示在display上
             display.text = textCurrentlyInDisplay + digit //显示的内容等于显示的加上按键的
@@ -24,30 +24,29 @@ class ViewController: UIViewController {
             urerIsIntheMiddleofTyping = true
         }
     }
-    
+    //下面语句只负责类型转换，不参与计算
     var displayValue: Double {
         get {
             return Double(display.text!)!
-        
         }
         set {
         display.text = String(newValue)
         }
     }
+    private var brain = 计算器大脑()
     @IBAction func performOperation(_ sender: UIButton) {
-        urerIsIntheMiddleofTyping = false
+        if urerIsIntheMiddleofTyping {
+            brain.setOperand(displayValue)
+            urerIsIntheMiddleofTyping = false
+        }
+        
+        //取得计算器运算的符号
+        //需要通知大脑
         if let mathematicalSymbol = sender.currentTitle {
-            switch mathematicalSymbol {
-            case "π":
-                displayValue = Double.pi
-            case "√": //定义平凡根
-                displayValue = sqrt(displayValue)
-            default:
-                break
-            }
+            brain.performOpeartion(mathematicalSymbol)
+        }
+        if let result = brain.result {
+            displayValue = result
         }
     }
-    
-    
-    
 }
