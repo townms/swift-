@@ -9,12 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Calculator#2/ViewController.swift"
-            timestampString = "536834502.316056"
+            filePath = "Calculator/DigitButton.swift"
+            timestampString = "536836006.07358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "DigitButton"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

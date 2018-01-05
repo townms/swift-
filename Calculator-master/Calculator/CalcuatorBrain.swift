@@ -21,6 +21,7 @@ struct 计算机大脑 {  //计算机结构体
         }
     }
     
+    
     private var operand: Double?
     
     private var pendingOperation: PendingBinaryOperation?
