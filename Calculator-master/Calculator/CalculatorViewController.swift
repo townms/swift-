@@ -45,7 +45,7 @@ class CalculatorViewController: UIViewController {
             
             if digit == "." {
                 displayVlaueOutlet.text = "0."
-            }else {
+            } else {
                 displayVlaueOutlet.text = digit  //
             }
             userIsInTyping = true  //并且设置用户输入为true 执行if 语句
@@ -74,8 +74,8 @@ class CalculatorViewController: UIViewController {
 
 extension CalculatorViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
-        return .default
+        return .lightContent
+//        return .default
     }
    
 }

@@ -17,12 +17,17 @@ func 取反(operand: Double) -> Double {
 //}
 
 struct 计算器大脑 {
+    
+    
     private var accmulator: Double?
+    
     private enum Operation {
+//        case AC1((Double) -> Int)
         case constant(Double)
         case unaryOpearion((Double) -> Double)
         case binaryOperation((Double,Double) -> Double)
         case equals
+        
     }
     private var optionals: Dictionary<String,Operation> = [
         "π": Operation.constant(Double.pi),
@@ -34,7 +39,8 @@ struct 计算器大脑 {
         "÷": Operation.binaryOperation( {$0 / $1 }),
         "+": Operation.binaryOperation( {$0 + $1 }),
         "-": Operation.binaryOperation( {$0 - $1 }),
-        "=": Operation.equals
+        "=": Operation.equals,
+        "AC": Operation.constant(0)
         
     ]
     mutating func performOpeartion(_ symol: String) {
@@ -42,6 +48,7 @@ struct 计算器大脑 {
             switch operation {
             case .constant(let value):
                 accmulator = value
+//                pbo = nil //可删除，判断挂起操作
             case .unaryOpearion(let function):
                 if accmulator != nil {
                  accmulator = function(accmulator!)
@@ -53,6 +60,9 @@ struct 计算器大脑 {
                 }
             case .equals:
              performPendingBinaryOperation()
+//            case .AC1(_):
+//                accmulator = 0
+            
             }
         }
     }

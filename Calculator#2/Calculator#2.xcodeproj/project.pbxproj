@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		777624D61FFDDCED0019F7DC /* DigitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777624D51FFDDCED0019F7DC /* DigitButton.swift */; };
 		778B9EE51FFCBB2F00136E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778B9EE41FFCBB2F00136E5B /* AppDelegate.swift */; };
 		778B9EE71FFCBB2F00136E5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778B9EE61FFCBB2F00136E5B /* ViewController.swift */; };
 		778B9EEA1FFCBB2F00136E5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778B9EE81FFCBB2F00136E5B /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		777624D51FFDDCED0019F7DC /* DigitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitButton.swift; sourceTree = "<group>"; };
 		778B9EE11FFCBB2F00136E5B /* Calculator#2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator#2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		778B9EE41FFCBB2F00136E5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		778B9EE61FFCBB2F00136E5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				778B9EE81FFCBB2F00136E5B /* Main.storyboard */,
 				778B9EF71FFCD68400136E5B /* CalculatoBrain.swift */,
 				778B9EF01FFCBB2F00136E5B /* Info.plist */,
+				777624D51FFDDCED0019F7DC /* DigitButton.swift */,
 				778B9EF61FFCBBE400136E5B /* support */,
 			);
 			path = "Calculator#2";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				778B9EE71FFCBB2F00136E5B /* ViewController.swift in Sources */,
+				777624D61FFDDCED0019F7DC /* DigitButton.swift in Sources */,
 				778B9EE51FFCBB2F00136E5B /* AppDelegate.swift in Sources */,
 				778B9EF81FFCD68400136E5B /* CalculatoBrain.swift in Sources */,
 			);
